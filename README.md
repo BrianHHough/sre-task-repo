@@ -360,7 +360,7 @@ kubectl --namespace sre port-forward $POD_NAME 9093
 The above command allows you to forward your Prometheus AlertManager to a port within your codespace (usually port 9093)
 
 This outputs:
-```
+```bash
 Forwarding from 127.0.0.1:9093 -> 9093
 Forwarding from [::1]:9093 -> 9093
 ```
@@ -370,6 +370,13 @@ Forwarding from [::1]:9093 -> 9093
 export POD_NAME=$(kubectl get pods --namespace sre -l "app.kubernetes.io/name=prometheus,app.kubernetes.io/instance=prometheus" -o jsonpath="{.items[0].metadata.name}")
 
 kubectl --namespace sre port-forward $POD_NAME 9090
+```
+
+This outputs:
+```bash
+POD_NAME 9090
+Forwarding from 127.0.0.1:9090 -> 9090
+Forwarding from [::1]:9090 -> 9090
 ```
 
 The above command allows you to forward your Prometheus server to a port within your codespace (usually port 9090).
@@ -402,6 +409,11 @@ Logged Out:
 
 Logged In:
 ![](./assets/App_Running_Port_30768_Screenshot_Admin.png)
+
+
+This open port will continue to serve requests for the connection to the port `:30768`
+
+![](./assets/Port_Forwarding_30768.png)
 
 
 ## Step 10: Commit code to my GitHub branch
