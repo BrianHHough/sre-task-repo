@@ -389,6 +389,7 @@ kubectl port-forward service/upcommerce-service -n sre 30768:5000
 ```
 
 There will be a pop-up that shows up:
+
 ![](./assets/App_Running_Port_30768.png)
 
 Port 5000 is the port in your service.yml file. Click on the Ports Tab on the Terminal Console. Next, Ctrl + click on the URL for the service port (30768)
@@ -409,4 +410,6 @@ Logged In:
     - Or switch to the right brnach: `git checkout branch-name`
 - Stage changes: `git add .`
     - Or specify individual files
-- Commit changes
+- Commit changes: `git commit -m "Your commit message"`
+- Push commit to GitHub: `git push origin branch-name`
+- Check status: `git status`
